@@ -1,0 +1,11 @@
+# 供 main 分支保护引用的必需检查；总是通过，只用于让「分支必须最新」规则生效。
+name: check
+on:
+  pull_request:
+  push:
+    branches: [main]
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo ok
